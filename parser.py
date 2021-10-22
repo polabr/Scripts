@@ -71,9 +71,5 @@ with open("WR-SWITCH-MIB.txt") as f:
             print("}")
             print("")
 
-            
-#            line2 = f.readline()
-#            print(line2)
-#            break
-            #            f1.write(line)
+
 
