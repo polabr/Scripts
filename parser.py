@@ -3,6 +3,8 @@ import re
 with open("WR-SWITCH-MIB.txt") as f:
 #    with open("out.txt", "w") as f1:
     for line in f:
+        if "Scalar" in line:
+            continue
         if "OBJECT-TYPE" in line:
             if "Counter32" in line:
                 continue
@@ -38,23 +40,29 @@ with open("WR-SWITCH-MIB.txt") as f:
             nextLine = f.readline()
 #            print("nextLine: ",nextLine)
 
+            d = ':' # delimiter
+            inputType = 'ai'
             type = 'i'
             # Add in these types later (mostly string-like)
-            if "OCTET" in nextLine or "Display" in nextLine or "Wrs" in nextLine or "Address" in nextLine:
+            #if "OCTET" in nextLine or "Display" in nextLine or "Wrs" in nextLine or "Address" in nextLine:
 #                print("non-int type here!")
-                continue
+            #    continue
 
-            #            if "Display" or "Wrs" or "OCTET" or "PhysAddress" in nextLine:
-            #                continue
+            if "Display" in nextLine or "OCTET" in nextLine:
+                inputType = 'stringin'
+            if "INTEGER" in nextLine:
+                d = "("
+                inputType = 'longin'
+            if "Wrs" in nextLine:
+                inputType = 'stringin'
+                d = ''
 
-            #            print(type)
-
-            print(f"record(ai, \"icarus_wrs_1/{objectNameLower}\")")
+            print(f"record({inputType}, \"icarus_wrs_1/{objectNameLower}\")")
             print("{")
             #this includes the "wrs" out front as a word
             print(f"  field(DESC, \"WRS {combineWithSpace}\") ")
             print("  field(SCAN, \"10 second\")")
             print("  field(DTYP, \"Snmp\")")
-            print(f"  field(INP, \"@icarus-wrs01 public %(P){objectName}.0 : 100 {type}\")") #f-string in Py3! Pretty cool (% is deprecated)
+            print(f"  field(INP, \"@icarus-wrs01 public %(P){objectName}.0 {d} 100 {type}\")") #f-string in Py3! Pretty cool (% is deprecated)
             print("}")
             print("")
