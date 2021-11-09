@@ -1,11 +1,3 @@
-record(longin, "icarus_wrs_1/scalarone")
-{
-  field(DESC, "WRS Scalar One") 
-  field(SCAN, "10 second")
-  field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsScalarOne.0 ( 100 i")
-}
-
 record(longin, "icarus_wrs_1/mainsystemstatus")
 {
   field(DESC, "WRS Main System Status") 
@@ -150,12 +142,132 @@ record(longin, "icarus_wrs_1/rtustatus")
   field(INP, "@icarus-wrs01 public %(P)wrsRTUStatus.0 ( 100 i")
 }
 
-record(longin, "icarus_wrs_1/datetai")
+record(stringin, "icarus_wrs_1/versionswversion")
+{
+  field(DESC, "WRS Version Sw Version") 
+  field(SCAN, "10 second")
+  field(DTYP, "Snmp")
+  field(INP, "@icarus-wrs01 public %(P)wrsVersionSwVersion.0 : 100 i")
+}
+
+record(stringin, "icarus_wrs_1/versionswbuildby")
+{
+  field(DESC, "WRS Version Sw Build By") 
+  field(SCAN, "10 second")
+  field(DTYP, "Snmp")
+  field(INP, "@icarus-wrs01 public %(P)wrsVersionSwBuildBy.0 : 100 i")
+}
+
+record(stringin, "icarus_wrs_1/versionswbuilddate")
+{
+  field(DESC, "WRS Version Sw Build Date") 
+  field(SCAN, "10 second")
+  field(DTYP, "Snmp")
+  field(INP, "@icarus-wrs01 public %(P)wrsVersionSwBuildDate.0 : 100 i")
+}
+
+record(stringin, "icarus_wrs_1/versionbackplaneversion")
+{
+  field(DESC, "WRS Version Backplane Version") 
+  field(SCAN, "10 second")
+  field(DTYP, "Snmp")
+  field(INP, "@icarus-wrs01 public %(P)wrsVersionBackplaneVersion.0 : 100 i")
+}
+
+record(stringin, "icarus_wrs_1/versionfpgatype")
+{
+  field(DESC, "WRS Version Fpga Type") 
+  field(SCAN, "10 second")
+  field(DTYP, "Snmp")
+  field(INP, "@icarus-wrs01 public %(P)wrsVersionFpgaType.0 : 100 i")
+}
+
+record(stringin, "icarus_wrs_1/versionmanufacturer")
+{
+  field(DESC, "WRS Version Manufacturer") 
+  field(SCAN, "10 second")
+  field(DTYP, "Snmp")
+  field(INP, "@icarus-wrs01 public %(P)wrsVersionManufacturer.0 : 100 i")
+}
+
+record(stringin, "icarus_wrs_1/versionswitchserialnumber")
+{
+  field(DESC, "WRS Version Switch Serial Number") 
+  field(SCAN, "10 second")
+  field(DTYP, "Snmp")
+  field(INP, "@icarus-wrs01 public %(P)wrsVersionSwitchSerialNumber.0 : 100 i")
+}
+
+record(stringin, "icarus_wrs_1/versionscbversion")
+{
+  field(DESC, "WRS Version Scb Version") 
+  field(SCAN, "10 second")
+  field(DTYP, "Snmp")
+  field(INP, "@icarus-wrs01 public %(P)wrsVersionScbVersion.0 : 100 i")
+}
+
+record(stringin, "icarus_wrs_1/versiongwversion")
+{
+  field(DESC, "WRS Version Gw Version") 
+  field(SCAN, "10 second")
+  field(DTYP, "Snmp")
+  field(INP, "@icarus-wrs01 public %(P)wrsVersionGwVersion.0 : 100 i")
+}
+
+record(stringin, "icarus_wrs_1/versiongwbuild")
+{
+  field(DESC, "WRS Version Gw Build") 
+  field(SCAN, "10 second")
+  field(DTYP, "Snmp")
+  field(INP, "@icarus-wrs01 public %(P)wrsVersionGwBuild.0 : 100 i")
+}
+
+record(stringin, "icarus_wrs_1/versionswitchhdlcommitid")
+{
+  field(DESC, "WRS Version Switch Hdl Commit Id") 
+  field(SCAN, "10 second")
+  field(DTYP, "Snmp")
+  field(INP, "@icarus-wrs01 public %(P)wrsVersionSwitchHdlCommitId.0 : 100 i")
+}
+
+record(stringin, "icarus_wrs_1/versiongeneralcorescommitid")
+{
+  field(DESC, "WRS Version General Cores Commit Id") 
+  field(SCAN, "10 second")
+  field(DTYP, "Snmp")
+  field(INP, "@icarus-wrs01 public %(P)wrsVersionGeneralCoresCommitId.0 : 100 i")
+}
+
+record(stringin, "icarus_wrs_1/versionwrcorescommitid")
+{
+  field(DESC, "WRS Version Wr Cores Commit Id") 
+  field(SCAN, "10 second")
+  field(DTYP, "Snmp")
+  field(INP, "@icarus-wrs01 public %(P)wrsVersionWrCoresCommitId.0 : 100 i")
+}
+
+record(stringin, "icarus_wrs_1/versionlastupdatedate")
+{
+  field(DESC, "WRS Version Last Update Date") 
+  field(SCAN, "10 second")
+  field(DTYP, "Snmp")
+  field(INP, "@icarus-wrs01 public %(P)wrsVersionLastUpdateDate.0 : 100 i")
+}
+
+record(ai, "icarus_wrs_1/datetai")
 {
   field(DESC, "WRS Date TAI") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsDateTAI.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsDateTAI.0 : 100 i")
+}
+
+record(stringin, "icarus_wrs_1/datetaistring")
+{
+  field(DESC, "WRS Date TAIString") 
+  field(SCAN, "10 second")
+  field(DTYP, "Snmp")
+  field(INP, "@icarus-wrs01 public %(P)wrsDateTAIString.0 : 100 i")
 }
 
 record(longin, "icarus_wrs_1/systemclockstatusdetails")
@@ -166,28 +278,28 @@ record(longin, "icarus_wrs_1/systemclockstatusdetails")
   field(INP, "@icarus-wrs01 public %(P)wrsSystemClockStatusDetails.0 ( 100 i")
 }
 
-record(longin, "icarus_wrs_1/systemclockdrift")
+record(ai, "icarus_wrs_1/systemclockdrift")
 {
   field(DESC, "WRS System Clock Drift") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsSystemClockDrift.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsSystemClockDrift.0 : 100 i")
 }
 
-record(longin, "icarus_wrs_1/systemclockdriftthreshold")
+record(ai, "icarus_wrs_1/systemclockdriftthreshold")
 {
   field(DESC, "WRS System Clock Drift Threshold") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsSystemClockDriftThreshold.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsSystemClockDriftThreshold.0 : 100 i")
 }
 
-record(longin, "icarus_wrs_1/systemclockcheckinterval")
+record(ai, "icarus_wrs_1/systemclockcheckinterval")
 {
   field(DESC, "WRS System Clock Check Interval") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsSystemClockCheckInterval.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsSystemClockCheckInterval.0 : 100 i")
 }
 
 record(longin, "icarus_wrs_1/systemclockcheckintervalunit")
@@ -222,20 +334,28 @@ record(longin, "icarus_wrs_1/leapsecsourcestatusdetails")
   field(INP, "@icarus-wrs01 public %(P)wrsLeapSecSourceStatusDetails.0 ( 100 i")
 }
 
-record(longin, "icarus_wrs_1/bootcnt")
+record(stringin, "icarus_wrs_1/leapsecsourceurl")
+{
+  field(DESC, "WRS Leap Sec Source URL") 
+  field(SCAN, "10 second")
+  field(DTYP, "Snmp")
+  field(INP, "@icarus-wrs01 public %(P)wrsLeapSecSourceURL.0 : 100 i")
+}
+
+record(ai, "icarus_wrs_1/bootcnt")
 {
   field(DESC, "WRS Boot Cnt") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsBootCnt.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsBootCnt.0 : 100 i")
 }
 
-record(longin, "icarus_wrs_1/rebootcnt")
+record(ai, "icarus_wrs_1/rebootcnt")
 {
   field(DESC, "WRS Reboot Cnt") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsRebootCnt.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsRebootCnt.0 : 100 i")
 }
 
 record(longin, "icarus_wrs_1/restartreason")
@@ -246,12 +366,44 @@ record(longin, "icarus_wrs_1/restartreason")
   field(INP, "@icarus-wrs01 public %(P)wrsRestartReason.0 ( 100 i")
 }
 
+record(stringin, "icarus_wrs_1/faultip")
+{
+  field(DESC, "WRS Fault IP") 
+  field(SCAN, "10 second")
+  field(DTYP, "Snmp")
+  field(INP, "@icarus-wrs01 public %(P)wrsFaultIP.0 : 100 i")
+}
+
+record(stringin, "icarus_wrs_1/faultlr")
+{
+  field(DESC, "WRS Fault LR") 
+  field(SCAN, "10 second")
+  field(DTYP, "Snmp")
+  field(INP, "@icarus-wrs01 public %(P)wrsFaultLR.0 : 100 i")
+}
+
 record(longin, "icarus_wrs_1/configsource")
 {
   field(DESC, "WRS Config Source") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
   field(INP, "@icarus-wrs01 public %(P)wrsConfigSource.0 ( 100 i")
+}
+
+record(stringin, "icarus_wrs_1/configsourceurl")
+{
+  field(DESC, "WRS Config Source Url") 
+  field(SCAN, "10 second")
+  field(DTYP, "Snmp")
+  field(INP, "@icarus-wrs01 public %(P)wrsConfigSourceUrl.0 : 100 i")
+}
+
+record(stringin, "icarus_wrs_1/restartreasonmonit")
+{
+  field(DESC, "WRS Restart Reason Monit") 
+  field(SCAN, "10 second")
+  field(DTYP, "Snmp")
+  field(INP, "@icarus-wrs01 public %(P)wrsRestartReasonMonit.0 : 100 i")
 }
 
 record(longin, "icarus_wrs_1/bootconfigstatus")
@@ -302,12 +454,12 @@ record(longin, "icarus_wrs_1/bootuserspacedaemonsmissing")
   field(INP, "@icarus-wrs01 public %(P)wrsBootUserspaceDaemonsMissing.0 ( 100 i")
 }
 
-record(longin, "icarus_wrs_1/gwwatchdogtimeouts")
+record(ai, "icarus_wrs_1/gwwatchdogtimeouts")
 {
   field(DESC, "WRS Gw Watchdog Timeouts") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsGwWatchdogTimeouts.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsGwWatchdogTimeouts.0 : 100 i")
 }
 
 record(longin, "icarus_wrs_1/fwupdatestatus")
@@ -324,6 +476,14 @@ record(longin, "icarus_wrs_1/custombootscriptsource")
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
   field(INP, "@icarus-wrs01 public %(P)wrsCustomBootScriptSource.0 ( 100 i")
+}
+
+record(stringin, "icarus_wrs_1/custombootscriptsourceurl")
+{
+  field(DESC, "WRS Custom Boot Script Source Url") 
+  field(SCAN, "10 second")
+  field(DTYP, "Snmp")
+  field(INP, "@icarus-wrs01 public %(P)wrsCustomBootScriptSourceUrl.0 : 100 i")
 }
 
 record(longin, "icarus_wrs_1/custombootscriptstatus")
@@ -358,252 +518,308 @@ record(longin, "icarus_wrs_1/vlanssetstatus")
   field(INP, "@icarus-wrs01 public %(P)wrsVlansSetStatus.0 ( 100 i")
 }
 
-record(longin, "icarus_wrs_1/tempfpga")
+record(ai, "icarus_wrs_1/tempfpga")
 {
   field(DESC, "WRS Temp FPGA") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsTempFPGA.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsTempFPGA.0 : 100 i")
 }
 
-record(longin, "icarus_wrs_1/temppll")
+record(ai, "icarus_wrs_1/temppll")
 {
   field(DESC, "WRS Temp PLL") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsTempPLL.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsTempPLL.0 : 100 i")
 }
 
-record(longin, "icarus_wrs_1/temppsl")
+record(ai, "icarus_wrs_1/temppsl")
 {
   field(DESC, "WRS Temp PSL") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsTempPSL.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsTempPSL.0 : 100 i")
 }
 
-record(longin, "icarus_wrs_1/temppsr")
+record(ai, "icarus_wrs_1/temppsr")
 {
   field(DESC, "WRS Temp PSR") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsTempPSR.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsTempPSR.0 : 100 i")
 }
 
-record(longin, "icarus_wrs_1/tempthresholdfpga")
+record(ai, "icarus_wrs_1/tempthresholdfpga")
 {
   field(DESC, "WRS Temp Threshold FPGA") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsTempThresholdFPGA.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsTempThresholdFPGA.0 : 100 i")
 }
 
-record(longin, "icarus_wrs_1/tempthresholdpll")
+record(ai, "icarus_wrs_1/tempthresholdpll")
 {
   field(DESC, "WRS Temp Threshold PLL") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsTempThresholdPLL.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsTempThresholdPLL.0 : 100 i")
 }
 
-record(longin, "icarus_wrs_1/tempthresholdpsl")
+record(ai, "icarus_wrs_1/tempthresholdpsl")
 {
   field(DESC, "WRS Temp Threshold PSL") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsTempThresholdPSL.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsTempThresholdPSL.0 : 100 i")
 }
 
-record(longin, "icarus_wrs_1/tempthresholdpsr")
+record(ai, "icarus_wrs_1/tempthresholdpsr")
 {
   field(DESC, "WRS Temp Threshold PSR") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsTempThresholdPSR.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsTempThresholdPSR.0 : 100 i")
 }
 
-record(longin, "icarus_wrs_1/memorytotal")
+record(ai, "icarus_wrs_1/memorytotal")
 {
   field(DESC, "WRS Memory Total") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsMemoryTotal.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsMemoryTotal.0 : 100 i")
 }
 
-record(longin, "icarus_wrs_1/memoryused")
+record(ai, "icarus_wrs_1/memoryused")
 {
   field(DESC, "WRS Memory Used") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsMemoryUsed.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsMemoryUsed.0 : 100 i")
 }
 
-record(longin, "icarus_wrs_1/memoryusedperc")
+record(ai, "icarus_wrs_1/memoryusedperc")
 {
   field(DESC, "WRS Memory Used Perc") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsMemoryUsedPerc.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsMemoryUsedPerc.0 : 100 i")
 }
 
-record(longin, "icarus_wrs_1/memoryfree")
+record(ai, "icarus_wrs_1/memoryfree")
 {
   field(DESC, "WRS Memory Free") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsMemoryFree.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsMemoryFree.0 : 100 i")
 }
 
-record(longin, "icarus_wrs_1/cpuloadavg1min")
+record(ai, "icarus_wrs_1/cpuloadavg1min")
 {
   field(DESC, "WRS CPULoad Avg1min") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsCPULoadAvg1min.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsCPULoadAvg1min.0 : 100 i")
 }
 
-record(longin, "icarus_wrs_1/cpuloadavg5min")
+record(ai, "icarus_wrs_1/cpuloadavg5min")
 {
   field(DESC, "WRS CPULoad Avg5min") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsCPULoadAvg5min.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsCPULoadAvg5min.0 : 100 i")
 }
 
-record(longin, "icarus_wrs_1/cpuloadavg15min")
+record(ai, "icarus_wrs_1/cpuloadavg15min")
 {
   field(DESC, "WRS CPULoad Avg15min") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsCPULoadAvg15min.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsCPULoadAvg15min.0 : 100 i")
 }
 
-record(longin, "icarus_wrs_1/diskindex")
+record(stringin, "icarus_wrs_1/disktable")
+{
+  field(DESC, "WRS Disk Table") 
+  field(SCAN, "10 second")
+  field(DTYP, "Snmp")
+  field(INP, "@icarus-wrs01 public %(P)wrsDiskTable.0  100 i")
+}
+
+record(stringin, "icarus_wrs_1/diskentry")
+{
+  field(DESC, "WRS Disk Entry") 
+  field(SCAN, "10 second")
+  field(DTYP, "Snmp")
+  field(INP, "@icarus-wrs01 public %(P)wrsDiskEntry.0  100 i")
+}
+
+record(ai, "icarus_wrs_1/diskindex")
 {
   field(DESC, "WRS Disk Index") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsDiskIndex.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsDiskIndex.0 : 100 i")
 }
 
-record(longin, "icarus_wrs_1/disksize")
+record(stringin, "icarus_wrs_1/diskmountpath")
+{
+  field(DESC, "WRS Disk Mount Path") 
+  field(SCAN, "10 second")
+  field(DTYP, "Snmp")
+  field(INP, "@icarus-wrs01 public %(P)wrsDiskMountPath.0 : 100 i")
+}
+
+record(ai, "icarus_wrs_1/disksize")
 {
   field(DESC, "WRS Disk Size") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsDiskSize.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsDiskSize.0 : 100 i")
 }
 
-record(longin, "icarus_wrs_1/diskused")
+record(ai, "icarus_wrs_1/diskused")
 {
   field(DESC, "WRS Disk Used") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsDiskUsed.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsDiskUsed.0 : 100 i")
 }
 
-record(longin, "icarus_wrs_1/diskfree")
+record(ai, "icarus_wrs_1/diskfree")
 {
   field(DESC, "WRS Disk Free") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsDiskFree.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsDiskFree.0 : 100 i")
 }
 
-record(longin, "icarus_wrs_1/diskuserate")
+record(ai, "icarus_wrs_1/diskuserate")
 {
   field(DESC, "WRS Disk Use Rate") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsDiskUseRate.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsDiskUseRate.0 : 100 i")
 }
 
-record(longin, "icarus_wrs_1/startcnthal")
+record(stringin, "icarus_wrs_1/diskfilesystem")
+{
+  field(DESC, "WRS Disk Filesystem") 
+  field(SCAN, "10 second")
+  field(DTYP, "Snmp")
+  field(INP, "@icarus-wrs01 public %(P)wrsDiskFilesystem.0 : 100 i")
+}
+
+record(ai, "icarus_wrs_1/startcnthal")
 {
   field(DESC, "WRS Start Cnt HAL") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsStartCntHAL.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsStartCntHAL.0 : 100 i")
 }
 
-record(longin, "icarus_wrs_1/startcntptp")
+record(ai, "icarus_wrs_1/startcntptp")
 {
   field(DESC, "WRS Start Cnt PTP") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsStartCntPTP.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsStartCntPTP.0 : 100 i")
 }
 
-record(longin, "icarus_wrs_1/startcntrtud")
+record(ai, "icarus_wrs_1/startcntrtud")
 {
   field(DESC, "WRS Start Cnt RTUd") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsStartCntRTUd.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsStartCntRTUd.0 : 100 i")
 }
 
-record(longin, "icarus_wrs_1/startcntsshd")
+record(ai, "icarus_wrs_1/startcntsshd")
 {
   field(DESC, "WRS Start Cnt Sshd") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsStartCntSshd.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsStartCntSshd.0 : 100 i")
 }
 
-record(longin, "icarus_wrs_1/startcnthttpd")
+record(ai, "icarus_wrs_1/startcnthttpd")
 {
   field(DESC, "WRS Start Cnt Httpd") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsStartCntHttpd.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsStartCntHttpd.0 : 100 i")
 }
 
-record(longin, "icarus_wrs_1/startcntsnmpd")
+record(ai, "icarus_wrs_1/startcntsnmpd")
 {
   field(DESC, "WRS Start Cnt Snmpd") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsStartCntSnmpd.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsStartCntSnmpd.0 : 100 i")
 }
 
-record(longin, "icarus_wrs_1/startcntsyslogd")
+record(ai, "icarus_wrs_1/startcntsyslogd")
 {
   field(DESC, "WRS Start Cnt Syslogd") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsStartCntSyslogd.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsStartCntSyslogd.0 : 100 i")
 }
 
-record(longin, "icarus_wrs_1/startcntwrswatchdog")
+record(ai, "icarus_wrs_1/startcntwrswatchdog")
 {
   field(DESC, "WRS Start Cnt Wrs Watchdog") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsStartCntWrsWatchdog.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsStartCntWrsWatchdog.0 : 100 i")
 }
 
-record(longin, "icarus_wrs_1/startcntlldpd")
+record(ai, "icarus_wrs_1/startcntlldpd")
 {
   field(DESC, "WRS Start Cnt Lldpd") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsStartCntLldpd.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsStartCntLldpd.0 : 100 i")
 }
 
-record(longin, "icarus_wrs_1/startcntldap")
+record(ai, "icarus_wrs_1/startcntldap")
 {
   field(DESC, "WRS Start Cnt Ldap") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsStartCntLdap.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsStartCntLdap.0 : 100 i")
 }
 
-record(longin, "icarus_wrs_1/startcntrvlan")
+record(ai, "icarus_wrs_1/startcntrvlan")
 {
   field(DESC, "WRS Start Cnt Rvlan") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsStartCntRvlan.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsStartCntRvlan.0 : 100 i")
+}
+
+record(stringin, "icarus_wrs_1/spllversion")
+{
+  field(DESC, "WRS Spll Version") 
+  field(SCAN, "10 second")
+  field(DTYP, "Snmp")
+  field(INP, "@icarus-wrs01 public %(P)wrsSpllVersion.0 : 100 i")
+}
+
+record(stringin, "icarus_wrs_1/spllbuilddate")
+{
+  field(DESC, "WRS Spll Build Date") 
+  field(SCAN, "10 second")
+  field(DTYP, "Snmp")
+  field(INP, "@icarus-wrs01 public %(P)wrsSpllBuildDate.0 : 100 i")
+}
+
+record(stringin, "icarus_wrs_1/spllbuildby")
+{
+  field(DESC, "WRS Spll Build By") 
+  field(SCAN, "10 second")
+  field(DTYP, "Snmp")
+  field(INP, "@icarus-wrs01 public %(P)wrsSpllBuildBy.0 : 100 i")
 }
 
 record(longin, "icarus_wrs_1/spllmode")
@@ -614,12 +830,12 @@ record(longin, "icarus_wrs_1/spllmode")
   field(INP, "@icarus-wrs01 public %(P)wrsSpllMode.0 ( 100 i")
 }
 
-record(longin, "icarus_wrs_1/spllirqcnt")
+record(ai, "icarus_wrs_1/spllirqcnt")
 {
   field(DESC, "WRS Spll Irq Cnt") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsSpllIrqCnt.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsSpllIrqCnt.0 : 100 i")
 }
 
 record(longin, "icarus_wrs_1/spllseqstate")
@@ -638,372 +854,436 @@ record(longin, "icarus_wrs_1/spllalignstate")
   field(INP, "@icarus-wrs01 public %(P)wrsSpllAlignState.0 ( 100 i")
 }
 
-record(longin, "icarus_wrs_1/spllhlock")
+record(ai, "icarus_wrs_1/spllhlock")
 {
   field(DESC, "WRS Spll Hlock") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsSpllHlock.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsSpllHlock.0 : 100 i")
 }
 
-record(longin, "icarus_wrs_1/spllmlock")
+record(ai, "icarus_wrs_1/spllmlock")
 {
   field(DESC, "WRS Spll Mlock") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsSpllMlock.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsSpllMlock.0 : 100 i")
 }
 
-record(longin, "icarus_wrs_1/spllhy")
+record(ai, "icarus_wrs_1/spllhy")
 {
   field(DESC, "WRS Spll HY") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsSpllHY.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsSpllHY.0 : 100 i")
 }
 
-record(longin, "icarus_wrs_1/spllmy")
+record(ai, "icarus_wrs_1/spllmy")
 {
   field(DESC, "WRS Spll MY") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsSpllMY.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsSpllMY.0 : 100 i")
 }
 
-record(longin, "icarus_wrs_1/splldelcnt")
+record(ai, "icarus_wrs_1/splldelcnt")
 {
   field(DESC, "WRS Spll Del Cnt") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsSpllDelCnt.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsSpllDelCnt.0 : 100 i")
 }
 
-record(longin, "icarus_wrs_1/pstatsindex")
+record(stringin, "icarus_wrs_1/pstatstable")
+{
+  field(DESC, "WRS Pstats Table") 
+  field(SCAN, "10 second")
+  field(DTYP, "Snmp")
+  field(INP, "@icarus-wrs01 public %(P)wrsPstatsTable.0  100 i")
+}
+
+record(stringin, "icarus_wrs_1/pstatsentry")
+{
+  field(DESC, "WRS Pstats Entry") 
+  field(SCAN, "10 second")
+  field(DTYP, "Snmp")
+  field(INP, "@icarus-wrs01 public %(P)wrsPstatsEntry.0  100 i")
+}
+
+record(ai, "icarus_wrs_1/pstatsindex")
 {
   field(DESC, "WRS Pstats Index") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsPstatsIndex.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsPstatsIndex.0 : 100 i")
 }
 
-record(longin, "icarus_wrs_1/pstatstxunderrun")
+record(stringin, "icarus_wrs_1/pstatsportname")
+{
+  field(DESC, "WRS Pstats Port Name") 
+  field(SCAN, "10 second")
+  field(DTYP, "Snmp")
+  field(INP, "@icarus-wrs01 public %(P)wrsPstatsPortName.0 : 100 i")
+}
+
+record(ai, "icarus_wrs_1/pstatstxunderrun")
 {
   field(DESC, "WRS Pstats TXUnderrun") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsPstatsTXUnderrun.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsPstatsTXUnderrun.0 : 100 i")
 }
 
-record(longin, "icarus_wrs_1/pstatsrxoverrun")
+record(ai, "icarus_wrs_1/pstatsrxoverrun")
 {
   field(DESC, "WRS Pstats RXOverrun") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsPstatsRXOverrun.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsPstatsRXOverrun.0 : 100 i")
 }
 
-record(longin, "icarus_wrs_1/pstatsrxinvalidcode")
+record(ai, "icarus_wrs_1/pstatsrxinvalidcode")
 {
   field(DESC, "WRS Pstats RXInvalid Code") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsPstatsRXInvalidCode.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsPstatsRXInvalidCode.0 : 100 i")
 }
 
-record(longin, "icarus_wrs_1/pstatsrxsynclost")
+record(ai, "icarus_wrs_1/pstatsrxsynclost")
 {
   field(DESC, "WRS Pstats RXSync Lost") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsPstatsRXSyncLost.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsPstatsRXSyncLost.0 : 100 i")
 }
 
-record(longin, "icarus_wrs_1/pstatsrxpauseframes")
+record(ai, "icarus_wrs_1/pstatsrxpauseframes")
 {
   field(DESC, "WRS Pstats RXPause Frames") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsPstatsRXPauseFrames.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsPstatsRXPauseFrames.0 : 100 i")
 }
 
-record(longin, "icarus_wrs_1/pstatsrxpfilterdropped")
+record(ai, "icarus_wrs_1/pstatsrxpfilterdropped")
 {
   field(DESC, "WRS Pstats RXPfilter Dropped") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsPstatsRXPfilterDropped.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsPstatsRXPfilterDropped.0 : 100 i")
 }
 
-record(longin, "icarus_wrs_1/pstatsrxpcserrors")
+record(ai, "icarus_wrs_1/pstatsrxpcserrors")
 {
   field(DESC, "WRS Pstats RXPCSErrors") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsPstatsRXPCSErrors.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsPstatsRXPCSErrors.0 : 100 i")
 }
 
-record(longin, "icarus_wrs_1/pstatsrxgiantframes")
+record(ai, "icarus_wrs_1/pstatsrxgiantframes")
 {
   field(DESC, "WRS Pstats RXGiant Frames") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsPstatsRXGiantFrames.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsPstatsRXGiantFrames.0 : 100 i")
 }
 
-record(longin, "icarus_wrs_1/pstatsrxruntframes")
+record(ai, "icarus_wrs_1/pstatsrxruntframes")
 {
   field(DESC, "WRS Pstats RXRunt Frames") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsPstatsRXRuntFrames.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsPstatsRXRuntFrames.0 : 100 i")
 }
 
-record(longin, "icarus_wrs_1/pstatsrxcrcerrors")
+record(ai, "icarus_wrs_1/pstatsrxcrcerrors")
 {
   field(DESC, "WRS Pstats RXCRCErrors") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsPstatsRXCRCErrors.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsPstatsRXCRCErrors.0 : 100 i")
 }
 
-record(longin, "icarus_wrs_1/pstatsrxpclass0")
+record(ai, "icarus_wrs_1/pstatsrxpclass0")
 {
   field(DESC, "WRS Pstats RXPclass0") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsPstatsRXPclass0.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsPstatsRXPclass0.0 : 100 i")
 }
 
-record(longin, "icarus_wrs_1/pstatsrxpclass1")
+record(ai, "icarus_wrs_1/pstatsrxpclass1")
 {
   field(DESC, "WRS Pstats RXPclass1") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsPstatsRXPclass1.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsPstatsRXPclass1.0 : 100 i")
 }
 
-record(longin, "icarus_wrs_1/pstatsrxpclass2")
+record(ai, "icarus_wrs_1/pstatsrxpclass2")
 {
   field(DESC, "WRS Pstats RXPclass2") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsPstatsRXPclass2.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsPstatsRXPclass2.0 : 100 i")
 }
 
-record(longin, "icarus_wrs_1/pstatsrxpclass3")
+record(ai, "icarus_wrs_1/pstatsrxpclass3")
 {
   field(DESC, "WRS Pstats RXPclass3") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsPstatsRXPclass3.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsPstatsRXPclass3.0 : 100 i")
 }
 
-record(longin, "icarus_wrs_1/pstatsrxpclass4")
+record(ai, "icarus_wrs_1/pstatsrxpclass4")
 {
   field(DESC, "WRS Pstats RXPclass4") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsPstatsRXPclass4.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsPstatsRXPclass4.0 : 100 i")
 }
 
-record(longin, "icarus_wrs_1/pstatsrxpclass5")
+record(ai, "icarus_wrs_1/pstatsrxpclass5")
 {
   field(DESC, "WRS Pstats RXPclass5") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsPstatsRXPclass5.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsPstatsRXPclass5.0 : 100 i")
 }
 
-record(longin, "icarus_wrs_1/pstatsrxpclass6")
+record(ai, "icarus_wrs_1/pstatsrxpclass6")
 {
   field(DESC, "WRS Pstats RXPclass6") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsPstatsRXPclass6.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsPstatsRXPclass6.0 : 100 i")
 }
 
-record(longin, "icarus_wrs_1/pstatsrxpclass7")
+record(ai, "icarus_wrs_1/pstatsrxpclass7")
 {
   field(DESC, "WRS Pstats RXPclass7") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsPstatsRXPclass7.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsPstatsRXPclass7.0 : 100 i")
 }
 
-record(longin, "icarus_wrs_1/pstatstxframes")
+record(ai, "icarus_wrs_1/pstatstxframes")
 {
   field(DESC, "WRS Pstats TXFrames") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsPstatsTXFrames.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsPstatsTXFrames.0 : 100 i")
 }
 
-record(longin, "icarus_wrs_1/pstatsrxframes")
+record(ai, "icarus_wrs_1/pstatsrxframes")
 {
   field(DESC, "WRS Pstats RXFrames") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsPstatsRXFrames.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsPstatsRXFrames.0 : 100 i")
 }
 
-record(longin, "icarus_wrs_1/pstatsrxdroprtufull")
+record(ai, "icarus_wrs_1/pstatsrxdroprtufull")
 {
   field(DESC, "WRS Pstats RXDrop RTUFull") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsPstatsRXDropRTUFull.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsPstatsRXDropRTUFull.0 : 100 i")
 }
 
-record(longin, "icarus_wrs_1/pstatsrxprio0")
+record(ai, "icarus_wrs_1/pstatsrxprio0")
 {
   field(DESC, "WRS Pstats RXPrio0") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsPstatsRXPrio0.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsPstatsRXPrio0.0 : 100 i")
 }
 
-record(longin, "icarus_wrs_1/pstatsrxprio1")
+record(ai, "icarus_wrs_1/pstatsrxprio1")
 {
   field(DESC, "WRS Pstats RXPrio1") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsPstatsRXPrio1.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsPstatsRXPrio1.0 : 100 i")
 }
 
-record(longin, "icarus_wrs_1/pstatsrxprio2")
+record(ai, "icarus_wrs_1/pstatsrxprio2")
 {
   field(DESC, "WRS Pstats RXPrio2") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsPstatsRXPrio2.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsPstatsRXPrio2.0 : 100 i")
 }
 
-record(longin, "icarus_wrs_1/pstatsrxprio3")
+record(ai, "icarus_wrs_1/pstatsrxprio3")
 {
   field(DESC, "WRS Pstats RXPrio3") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsPstatsRXPrio3.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsPstatsRXPrio3.0 : 100 i")
 }
 
-record(longin, "icarus_wrs_1/pstatsrxprio4")
+record(ai, "icarus_wrs_1/pstatsrxprio4")
 {
   field(DESC, "WRS Pstats RXPrio4") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsPstatsRXPrio4.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsPstatsRXPrio4.0 : 100 i")
 }
 
-record(longin, "icarus_wrs_1/pstatsrxprio5")
+record(ai, "icarus_wrs_1/pstatsrxprio5")
 {
   field(DESC, "WRS Pstats RXPrio5") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsPstatsRXPrio5.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsPstatsRXPrio5.0 : 100 i")
 }
 
-record(longin, "icarus_wrs_1/pstatsrxprio6")
+record(ai, "icarus_wrs_1/pstatsrxprio6")
 {
   field(DESC, "WRS Pstats RXPrio6") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsPstatsRXPrio6.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsPstatsRXPrio6.0 : 100 i")
 }
 
-record(longin, "icarus_wrs_1/pstatsrxprio7")
+record(ai, "icarus_wrs_1/pstatsrxprio7")
 {
   field(DESC, "WRS Pstats RXPrio7") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsPstatsRXPrio7.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsPstatsRXPrio7.0 : 100 i")
 }
 
-record(longin, "icarus_wrs_1/pstatsrtuvalid")
+record(ai, "icarus_wrs_1/pstatsrtuvalid")
 {
   field(DESC, "WRS Pstats RTUValid") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsPstatsRTUValid.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsPstatsRTUValid.0 : 100 i")
 }
 
-record(longin, "icarus_wrs_1/pstatsrturesponses")
+record(ai, "icarus_wrs_1/pstatsrturesponses")
 {
   field(DESC, "WRS Pstats RTUResponses") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsPstatsRTUResponses.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsPstatsRTUResponses.0 : 100 i")
 }
 
-record(longin, "icarus_wrs_1/pstatsrtudropped")
+record(ai, "icarus_wrs_1/pstatsrtudropped")
 {
   field(DESC, "WRS Pstats RTUDropped") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsPstatsRTUDropped.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsPstatsRTUDropped.0 : 100 i")
 }
 
-record(longin, "icarus_wrs_1/pstatsfastmatchpriority")
+record(ai, "icarus_wrs_1/pstatsfastmatchpriority")
 {
   field(DESC, "WRS Pstats Fast Match Priority") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsPstatsFastMatchPriority.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsPstatsFastMatchPriority.0 : 100 i")
 }
 
-record(longin, "icarus_wrs_1/pstatsfastmatchfastforward")
+record(ai, "icarus_wrs_1/pstatsfastmatchfastforward")
 {
   field(DESC, "WRS Pstats Fast Match Fast Forward") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsPstatsFastMatchFastForward.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsPstatsFastMatchFastForward.0 : 100 i")
 }
 
-record(longin, "icarus_wrs_1/pstatsfastmatchnonforward")
+record(ai, "icarus_wrs_1/pstatsfastmatchnonforward")
 {
   field(DESC, "WRS Pstats Fast Match Non Forward") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsPstatsFastMatchNonForward.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsPstatsFastMatchNonForward.0 : 100 i")
 }
 
-record(longin, "icarus_wrs_1/pstatsfastmatchrespvalid")
+record(ai, "icarus_wrs_1/pstatsfastmatchrespvalid")
 {
   field(DESC, "WRS Pstats Fast Match Resp Valid") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsPstatsFastMatchRespValid.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsPstatsFastMatchRespValid.0 : 100 i")
 }
 
-record(longin, "icarus_wrs_1/pstatsfullmatchrespvalid")
+record(ai, "icarus_wrs_1/pstatsfullmatchrespvalid")
 {
   field(DESC, "WRS Pstats Full Match Resp Valid") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsPstatsFullMatchRespValid.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsPstatsFullMatchRespValid.0 : 100 i")
 }
 
-record(longin, "icarus_wrs_1/pstatsforwarded")
+record(ai, "icarus_wrs_1/pstatsforwarded")
 {
   field(DESC, "WRS Pstats Forwarded") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsPstatsForwarded.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsPstatsForwarded.0 : 100 i")
 }
 
-record(longin, "icarus_wrs_1/pstatstrurespvalid")
+record(ai, "icarus_wrs_1/pstatstrurespvalid")
 {
   field(DESC, "WRS Pstats TRUResp Valid") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsPstatsTRURespValid.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsPstatsTRURespValid.0 : 100 i")
 }
 
-record(longin, "icarus_wrs_1/ptpdataindex")
+record(stringin, "icarus_wrs_1/ptpdatatable")
+{
+  field(DESC, "WRS Ptp Data Table") 
+  field(SCAN, "10 second")
+  field(DTYP, "Snmp")
+  field(INP, "@icarus-wrs01 public %(P)wrsPtpDataTable.0  100 i")
+}
+
+record(stringin, "icarus_wrs_1/ptpdataentry")
+{
+  field(DESC, "WRS Ptp Data Entry") 
+  field(SCAN, "10 second")
+  field(DTYP, "Snmp")
+  field(INP, "@icarus-wrs01 public %(P)wrsPtpDataEntry.0  100 i")
+}
+
+record(ai, "icarus_wrs_1/ptpdataindex")
 {
   field(DESC, "WRS Ptp Data Index") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsPtpDataIndex.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsPtpDataIndex.0 : 100 i")
+}
+
+record(stringin, "icarus_wrs_1/ptpportname")
+{
+  field(DESC, "WRS Ptp Port Name") 
+  field(SCAN, "10 second")
+  field(DTYP, "Snmp")
+  field(INP, "@icarus-wrs01 public %(P)wrsPtpPortName.0 : 100 i")
+}
+
+record(stringin, "icarus_wrs_1/ptpgrandmasterid")
+{
+  field(DESC, "WRS Ptp Grandmaster ID") 
+  field(SCAN, "10 second")
+  field(DTYP, "Snmp")
+  field(INP, "@icarus-wrs01 public %(P)wrsPtpGrandmasterID.0 : 100 i")
+}
+
+record(stringin, "icarus_wrs_1/ptpownid")
+{
+  field(DESC, "WRS Ptp Own ID") 
+  field(SCAN, "10 second")
+  field(DTYP, "Snmp")
+  field(INP, "@icarus-wrs01 public %(P)wrsPtpOwnID.0 : 100 i")
 }
 
 record(longin, "icarus_wrs_1/ptpmode")
@@ -1012,6 +1292,14 @@ record(longin, "icarus_wrs_1/ptpmode")
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
   field(INP, "@icarus-wrs01 public %(P)wrsPtpMode.0 ( 100 i")
+}
+
+record(stringin, "icarus_wrs_1/ptpservostate")
+{
+  field(DESC, "WRS Ptp Servo State") 
+  field(SCAN, "10 second")
+  field(DTYP, "Snmp")
+  field(INP, "@icarus-wrs01 public %(P)wrsPtpServoState.0 : 100 i")
 }
 
 record(longin, "icarus_wrs_1/ptpservostaten")
@@ -1030,116 +1318,124 @@ record(longin, "icarus_wrs_1/ptpphasetracking")
   field(INP, "@icarus-wrs01 public %(P)wrsPtpPhaseTracking.0 ( 100 i")
 }
 
-record(longin, "icarus_wrs_1/ptpclockoffsetps")
+record(stringin, "icarus_wrs_1/ptpsyncsource")
+{
+  field(DESC, "WRS Ptp Sync Source") 
+  field(SCAN, "10 second")
+  field(DTYP, "Snmp")
+  field(INP, "@icarus-wrs01 public %(P)wrsPtpSyncSource.0 : 100 i")
+}
+
+record(ai, "icarus_wrs_1/ptpclockoffsetps")
 {
   field(DESC, "WRS Ptp Clock Offset Ps") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsPtpClockOffsetPs.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsPtpClockOffsetPs.0 : 100 i")
 }
 
-record(longin, "icarus_wrs_1/ptpclockoffsetpshr")
+record(ai, "icarus_wrs_1/ptpclockoffsetpshr")
 {
   field(DESC, "WRS Ptp Clock Offset Ps HR") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsPtpClockOffsetPsHR.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsPtpClockOffsetPsHR.0 : 100 i")
 }
 
-record(longin, "icarus_wrs_1/ptpskew")
+record(ai, "icarus_wrs_1/ptpskew")
 {
   field(DESC, "WRS Ptp Skew") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsPtpSkew.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsPtpSkew.0 : 100 i")
 }
 
-record(longin, "icarus_wrs_1/ptprtt")
+record(ai, "icarus_wrs_1/ptprtt")
 {
   field(DESC, "WRS Ptp RTT") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsPtpRTT.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsPtpRTT.0 : 100 i")
 }
 
-record(longin, "icarus_wrs_1/ptplinklength")
+record(ai, "icarus_wrs_1/ptplinklength")
 {
   field(DESC, "WRS Ptp Link Length") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsPtpLinkLength.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsPtpLinkLength.0 : 100 i")
 }
 
-record(longin, "icarus_wrs_1/ptpservoupdates")
+record(ai, "icarus_wrs_1/ptpservoupdates")
 {
   field(DESC, "WRS Ptp Servo Updates") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsPtpServoUpdates.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsPtpServoUpdates.0 : 100 i")
 }
 
-record(longin, "icarus_wrs_1/ptpdeltatxm")
+record(ai, "icarus_wrs_1/ptpdeltatxm")
 {
   field(DESC, "WRS Ptp Delta Tx M") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsPtpDeltaTxM.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsPtpDeltaTxM.0 : 100 i")
 }
 
-record(longin, "icarus_wrs_1/ptpdeltarxm")
+record(ai, "icarus_wrs_1/ptpdeltarxm")
 {
   field(DESC, "WRS Ptp Delta Rx M") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsPtpDeltaRxM.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsPtpDeltaRxM.0 : 100 i")
 }
 
-record(longin, "icarus_wrs_1/ptpdeltatxs")
+record(ai, "icarus_wrs_1/ptpdeltatxs")
 {
   field(DESC, "WRS Ptp Delta Tx S") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsPtpDeltaTxS.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsPtpDeltaTxS.0 : 100 i")
 }
 
-record(longin, "icarus_wrs_1/ptpdeltarxs")
+record(ai, "icarus_wrs_1/ptpdeltarxs")
 {
   field(DESC, "WRS Ptp Delta Rx S") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsPtpDeltaRxS.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsPtpDeltaRxS.0 : 100 i")
 }
 
-record(longin, "icarus_wrs_1/ptpservostateerrcnt")
+record(ai, "icarus_wrs_1/ptpservostateerrcnt")
 {
   field(DESC, "WRS Ptp Servo State Err Cnt") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsPtpServoStateErrCnt.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsPtpServoStateErrCnt.0 : 100 i")
 }
 
-record(longin, "icarus_wrs_1/ptpclockoffseterrcnt")
+record(ai, "icarus_wrs_1/ptpclockoffseterrcnt")
 {
   field(DESC, "WRS Ptp Clock Offset Err Cnt") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsPtpClockOffsetErrCnt.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsPtpClockOffsetErrCnt.0 : 100 i")
 }
 
-record(longin, "icarus_wrs_1/ptprtterrcnt")
+record(ai, "icarus_wrs_1/ptprtterrcnt")
 {
   field(DESC, "WRS Ptp RTTErr Cnt") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsPtpRTTErrCnt.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsPtpRTTErrCnt.0 : 100 i")
 }
 
-record(longin, "icarus_wrs_1/ptpservoupdatetime")
+record(ai, "icarus_wrs_1/ptpservoupdatetime")
 {
   field(DESC, "WRS Ptp Servo Update Time") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsPtpServoUpdateTime.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsPtpServoUpdateTime.0 : 100 i")
 }
 
 record(longin, "icarus_wrs_1/ptpservoext")
@@ -1150,12 +1446,36 @@ record(longin, "icarus_wrs_1/ptpservoext")
   field(INP, "@icarus-wrs01 public %(P)wrsPtpServoExt.0 ( 100 i")
 }
 
-record(longin, "icarus_wrs_1/portstatusindex")
+record(stringin, "icarus_wrs_1/portstatustable")
+{
+  field(DESC, "WRS Port Status Table") 
+  field(SCAN, "10 second")
+  field(DTYP, "Snmp")
+  field(INP, "@icarus-wrs01 public %(P)wrsPortStatusTable.0  100 i")
+}
+
+record(stringin, "icarus_wrs_1/portstatusentry")
+{
+  field(DESC, "WRS Port Status Entry") 
+  field(SCAN, "10 second")
+  field(DTYP, "Snmp")
+  field(INP, "@icarus-wrs01 public %(P)wrsPortStatusEntry.0  100 i")
+}
+
+record(ai, "icarus_wrs_1/portstatusindex")
 {
   field(DESC, "WRS Port Status Index") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsPortStatusIndex.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsPortStatusIndex.0 : 100 i")
+}
+
+record(stringin, "icarus_wrs_1/portstatusportname")
+{
+  field(DESC, "WRS Port Status Port Name") 
+  field(SCAN, "10 second")
+  field(DTYP, "Snmp")
+  field(INP, "@icarus-wrs01 public %(P)wrsPortStatusPortName.0 : 100 i")
 }
 
 record(longin, "icarus_wrs_1/portstatuslink")
@@ -1182,6 +1502,38 @@ record(longin, "icarus_wrs_1/portstatuslocked")
   field(INP, "@icarus-wrs01 public %(P)wrsPortStatusLocked.0 ( 100 i")
 }
 
+record(stringin, "icarus_wrs_1/portstatuspeer")
+{
+  field(DESC, "WRS Port Status Peer") 
+  field(SCAN, "10 second")
+  field(DTYP, "Snmp")
+  field(INP, "@icarus-wrs01 public %(P)wrsPortStatusPeer.0 : 100 i")
+}
+
+record(stringin, "icarus_wrs_1/portstatussfpvn")
+{
+  field(DESC, "WRS Port Status Sfp VN") 
+  field(SCAN, "10 second")
+  field(DTYP, "Snmp")
+  field(INP, "@icarus-wrs01 public %(P)wrsPortStatusSfpVN.0 : 100 i")
+}
+
+record(stringin, "icarus_wrs_1/portstatussfppn")
+{
+  field(DESC, "WRS Port Status Sfp PN") 
+  field(SCAN, "10 second")
+  field(DTYP, "Snmp")
+  field(INP, "@icarus-wrs01 public %(P)wrsPortStatusSfpPN.0 : 100 i")
+}
+
+record(stringin, "icarus_wrs_1/portstatussfpvs")
+{
+  field(DESC, "WRS Port Status Sfp VS") 
+  field(SCAN, "10 second")
+  field(DTYP, "Snmp")
+  field(INP, "@icarus-wrs01 public %(P)wrsPortStatusSfpVS.0 : 100 i")
+}
+
 record(longin, "icarus_wrs_1/portstatussfpindb")
 {
   field(DESC, "WRS Port Status Sfp In DB") 
@@ -1206,20 +1558,20 @@ record(longin, "icarus_wrs_1/portstatussfperror")
   field(INP, "@icarus-wrs01 public %(P)wrsPortStatusSfpError.0 ( 100 i")
 }
 
-record(longin, "icarus_wrs_1/portstatusptptxframes")
+record(ai, "icarus_wrs_1/portstatusptptxframes")
 {
   field(DESC, "WRS Port Status Ptp Tx Frames") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsPortStatusPtpTxFrames.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsPortStatusPtpTxFrames.0 : 100 i")
 }
 
-record(longin, "icarus_wrs_1/portstatusptprxframes")
+record(ai, "icarus_wrs_1/portstatusptprxframes")
 {
   field(DESC, "WRS Port Status Ptp Rx Frames") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsPortStatusPtpRxFrames.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsPortStatusPtpRxFrames.0 : 100 i")
 }
 
 record(longin, "icarus_wrs_1/portstatusmonitor")
@@ -1238,52 +1590,52 @@ record(longin, "icarus_wrs_1/portstatussfpdom")
   field(INP, "@icarus-wrs01 public %(P)wrsPortStatusSfpDom.0 ( 100 i")
 }
 
-record(longin, "icarus_wrs_1/portstatussfptemp")
+record(ai, "icarus_wrs_1/portstatussfptemp")
 {
   field(DESC, "WRS Port Status Sfp Temp") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsPortStatusSfpTemp.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsPortStatusSfpTemp.0 : 100 i")
 }
 
-record(longin, "icarus_wrs_1/portstatussfpvcc")
+record(ai, "icarus_wrs_1/portstatussfpvcc")
 {
   field(DESC, "WRS Port Status Sfp Vcc") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsPortStatusSfpVcc.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsPortStatusSfpVcc.0 : 100 i")
 }
 
-record(longin, "icarus_wrs_1/portstatussfptxbias")
+record(ai, "icarus_wrs_1/portstatussfptxbias")
 {
   field(DESC, "WRS Port Status Sfp Tx Bias") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsPortStatusSfpTxBias.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsPortStatusSfpTxBias.0 : 100 i")
 }
 
-record(longin, "icarus_wrs_1/portstatussfptxpower")
+record(ai, "icarus_wrs_1/portstatussfptxpower")
 {
   field(DESC, "WRS Port Status Sfp Tx Power") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsPortStatusSfpTxPower.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsPortStatusSfpTxPower.0 : 100 i")
 }
 
-record(longin, "icarus_wrs_1/portstatussfprxpower")
+record(ai, "icarus_wrs_1/portstatussfprxpower")
 {
   field(DESC, "WRS Port Status Sfp Rx Power") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsPortStatusSfpRxPower.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsPortStatusSfpRxPower.0 : 100 i")
 }
 
-record(longin, "icarus_wrs_1/portstatust24p")
+record(ai, "icarus_wrs_1/portstatust24p")
 {
   field(DESC, "WRS Port Status T24p") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsPortStatusT24p.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsPortStatusT24p.0 : 100 i")
 }
 
 record(longin, "icarus_wrs_1/portstatust24pvalid")
@@ -1294,364 +1646,420 @@ record(longin, "icarus_wrs_1/portstatust24pvalid")
   field(INP, "@icarus-wrs01 public %(P)wrsPortStatusT24pValid.0 ( 100 i")
 }
 
-record(longin, "icarus_wrs_1/pstatshcindex")
+record(stringin, "icarus_wrs_1/pstatshctable")
+{
+  field(DESC, "WRS Pstats HCTable") 
+  field(SCAN, "10 second")
+  field(DTYP, "Snmp")
+  field(INP, "@icarus-wrs01 public %(P)wrsPstatsHCTable.0  100 i")
+}
+
+record(stringin, "icarus_wrs_1/pstatshcentry")
+{
+  field(DESC, "WRS Pstats HCEntry") 
+  field(SCAN, "10 second")
+  field(DTYP, "Snmp")
+  field(INP, "@icarus-wrs01 public %(P)wrsPstatsHCEntry.0  100 i")
+}
+
+record(ai, "icarus_wrs_1/pstatshcindex")
 {
   field(DESC, "WRS Pstats HCIndex") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsPstatsHCIndex.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsPstatsHCIndex.0 : 100 i")
 }
 
-record(longin, "icarus_wrs_1/pstatshctxunderrun")
+record(stringin, "icarus_wrs_1/pstatshcportname")
+{
+  field(DESC, "WRS Pstats HCPort Name") 
+  field(SCAN, "10 second")
+  field(DTYP, "Snmp")
+  field(INP, "@icarus-wrs01 public %(P)wrsPstatsHCPortName.0 : 100 i")
+}
+
+record(ai, "icarus_wrs_1/pstatshctxunderrun")
 {
   field(DESC, "WRS Pstats HCTXUnderrun") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsPstatsHCTXUnderrun.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsPstatsHCTXUnderrun.0 : 100 i")
 }
 
-record(longin, "icarus_wrs_1/pstatshcrxoverrun")
+record(ai, "icarus_wrs_1/pstatshcrxoverrun")
 {
   field(DESC, "WRS Pstats HCRXOverrun") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsPstatsHCRXOverrun.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsPstatsHCRXOverrun.0 : 100 i")
 }
 
-record(longin, "icarus_wrs_1/pstatshcrxinvalidcode")
+record(ai, "icarus_wrs_1/pstatshcrxinvalidcode")
 {
   field(DESC, "WRS Pstats HCRXInvalid Code") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsPstatsHCRXInvalidCode.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsPstatsHCRXInvalidCode.0 : 100 i")
 }
 
-record(longin, "icarus_wrs_1/pstatshcrxsynclost")
+record(ai, "icarus_wrs_1/pstatshcrxsynclost")
 {
   field(DESC, "WRS Pstats HCRXSync Lost") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsPstatsHCRXSyncLost.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsPstatsHCRXSyncLost.0 : 100 i")
 }
 
-record(longin, "icarus_wrs_1/pstatshcrxpauseframes")
+record(ai, "icarus_wrs_1/pstatshcrxpauseframes")
 {
   field(DESC, "WRS Pstats HCRXPause Frames") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsPstatsHCRXPauseFrames.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsPstatsHCRXPauseFrames.0 : 100 i")
 }
 
-record(longin, "icarus_wrs_1/pstatshcrxpfilterdropped")
+record(ai, "icarus_wrs_1/pstatshcrxpfilterdropped")
 {
   field(DESC, "WRS Pstats HCRXPfilter Dropped") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsPstatsHCRXPfilterDropped.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsPstatsHCRXPfilterDropped.0 : 100 i")
 }
 
-record(longin, "icarus_wrs_1/pstatshcrxpcserrors")
+record(ai, "icarus_wrs_1/pstatshcrxpcserrors")
 {
   field(DESC, "WRS Pstats HCRXPCSErrors") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsPstatsHCRXPCSErrors.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsPstatsHCRXPCSErrors.0 : 100 i")
 }
 
-record(longin, "icarus_wrs_1/pstatshcrxgiantframes")
+record(ai, "icarus_wrs_1/pstatshcrxgiantframes")
 {
   field(DESC, "WRS Pstats HCRXGiant Frames") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsPstatsHCRXGiantFrames.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsPstatsHCRXGiantFrames.0 : 100 i")
 }
 
-record(longin, "icarus_wrs_1/pstatshcrxruntframes")
+record(ai, "icarus_wrs_1/pstatshcrxruntframes")
 {
   field(DESC, "WRS Pstats HCRXRunt Frames") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsPstatsHCRXRuntFrames.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsPstatsHCRXRuntFrames.0 : 100 i")
 }
 
-record(longin, "icarus_wrs_1/pstatshcrxcrcerrors")
+record(ai, "icarus_wrs_1/pstatshcrxcrcerrors")
 {
   field(DESC, "WRS Pstats HCRXCRCErrors") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsPstatsHCRXCRCErrors.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsPstatsHCRXCRCErrors.0 : 100 i")
 }
 
-record(longin, "icarus_wrs_1/pstatshcrxpclass0")
+record(ai, "icarus_wrs_1/pstatshcrxpclass0")
 {
   field(DESC, "WRS Pstats HCRXPclass0") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsPstatsHCRXPclass0.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsPstatsHCRXPclass0.0 : 100 i")
 }
 
-record(longin, "icarus_wrs_1/pstatshcrxpclass1")
+record(ai, "icarus_wrs_1/pstatshcrxpclass1")
 {
   field(DESC, "WRS Pstats HCRXPclass1") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsPstatsHCRXPclass1.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsPstatsHCRXPclass1.0 : 100 i")
 }
 
-record(longin, "icarus_wrs_1/pstatshcrxpclass2")
+record(ai, "icarus_wrs_1/pstatshcrxpclass2")
 {
   field(DESC, "WRS Pstats HCRXPclass2") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsPstatsHCRXPclass2.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsPstatsHCRXPclass2.0 : 100 i")
 }
 
-record(longin, "icarus_wrs_1/pstatshcrxpclass3")
+record(ai, "icarus_wrs_1/pstatshcrxpclass3")
 {
   field(DESC, "WRS Pstats HCRXPclass3") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsPstatsHCRXPclass3.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsPstatsHCRXPclass3.0 : 100 i")
 }
 
-record(longin, "icarus_wrs_1/pstatshcrxpclass4")
+record(ai, "icarus_wrs_1/pstatshcrxpclass4")
 {
   field(DESC, "WRS Pstats HCRXPclass4") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsPstatsHCRXPclass4.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsPstatsHCRXPclass4.0 : 100 i")
 }
 
-record(longin, "icarus_wrs_1/pstatshcrxpclass5")
+record(ai, "icarus_wrs_1/pstatshcrxpclass5")
 {
   field(DESC, "WRS Pstats HCRXPclass5") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsPstatsHCRXPclass5.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsPstatsHCRXPclass5.0 : 100 i")
 }
 
-record(longin, "icarus_wrs_1/pstatshcrxpclass6")
+record(ai, "icarus_wrs_1/pstatshcrxpclass6")
 {
   field(DESC, "WRS Pstats HCRXPclass6") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsPstatsHCRXPclass6.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsPstatsHCRXPclass6.0 : 100 i")
 }
 
-record(longin, "icarus_wrs_1/pstatshcrxpclass7")
+record(ai, "icarus_wrs_1/pstatshcrxpclass7")
 {
   field(DESC, "WRS Pstats HCRXPclass7") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsPstatsHCRXPclass7.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsPstatsHCRXPclass7.0 : 100 i")
 }
 
-record(longin, "icarus_wrs_1/pstatshctxframes")
+record(ai, "icarus_wrs_1/pstatshctxframes")
 {
   field(DESC, "WRS Pstats HCTXFrames") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsPstatsHCTXFrames.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsPstatsHCTXFrames.0 : 100 i")
 }
 
-record(longin, "icarus_wrs_1/pstatshcrxframes")
+record(ai, "icarus_wrs_1/pstatshcrxframes")
 {
   field(DESC, "WRS Pstats HCRXFrames") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsPstatsHCRXFrames.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsPstatsHCRXFrames.0 : 100 i")
 }
 
-record(longin, "icarus_wrs_1/pstatshcrxdroprtufull")
+record(ai, "icarus_wrs_1/pstatshcrxdroprtufull")
 {
   field(DESC, "WRS Pstats HCRXDrop RTUFull") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsPstatsHCRXDropRTUFull.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsPstatsHCRXDropRTUFull.0 : 100 i")
 }
 
-record(longin, "icarus_wrs_1/pstatshcrxprio0")
+record(ai, "icarus_wrs_1/pstatshcrxprio0")
 {
   field(DESC, "WRS Pstats HCRXPrio0") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsPstatsHCRXPrio0.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsPstatsHCRXPrio0.0 : 100 i")
 }
 
-record(longin, "icarus_wrs_1/pstatshcrxprio1")
+record(ai, "icarus_wrs_1/pstatshcrxprio1")
 {
   field(DESC, "WRS Pstats HCRXPrio1") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsPstatsHCRXPrio1.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsPstatsHCRXPrio1.0 : 100 i")
 }
 
-record(longin, "icarus_wrs_1/pstatshcrxprio2")
+record(ai, "icarus_wrs_1/pstatshcrxprio2")
 {
   field(DESC, "WRS Pstats HCRXPrio2") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsPstatsHCRXPrio2.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsPstatsHCRXPrio2.0 : 100 i")
 }
 
-record(longin, "icarus_wrs_1/pstatshcrxprio3")
+record(ai, "icarus_wrs_1/pstatshcrxprio3")
 {
   field(DESC, "WRS Pstats HCRXPrio3") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsPstatsHCRXPrio3.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsPstatsHCRXPrio3.0 : 100 i")
 }
 
-record(longin, "icarus_wrs_1/pstatshcrxprio4")
+record(ai, "icarus_wrs_1/pstatshcrxprio4")
 {
   field(DESC, "WRS Pstats HCRXPrio4") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsPstatsHCRXPrio4.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsPstatsHCRXPrio4.0 : 100 i")
 }
 
-record(longin, "icarus_wrs_1/pstatshcrxprio5")
+record(ai, "icarus_wrs_1/pstatshcrxprio5")
 {
   field(DESC, "WRS Pstats HCRXPrio5") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsPstatsHCRXPrio5.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsPstatsHCRXPrio5.0 : 100 i")
 }
 
-record(longin, "icarus_wrs_1/pstatshcrxprio6")
+record(ai, "icarus_wrs_1/pstatshcrxprio6")
 {
   field(DESC, "WRS Pstats HCRXPrio6") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsPstatsHCRXPrio6.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsPstatsHCRXPrio6.0 : 100 i")
 }
 
-record(longin, "icarus_wrs_1/pstatshcrxprio7")
+record(ai, "icarus_wrs_1/pstatshcrxprio7")
 {
   field(DESC, "WRS Pstats HCRXPrio7") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsPstatsHCRXPrio7.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsPstatsHCRXPrio7.0 : 100 i")
 }
 
-record(longin, "icarus_wrs_1/pstatshcrtuvalid")
+record(ai, "icarus_wrs_1/pstatshcrtuvalid")
 {
   field(DESC, "WRS Pstats HCRTUValid") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsPstatsHCRTUValid.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsPstatsHCRTUValid.0 : 100 i")
 }
 
-record(longin, "icarus_wrs_1/pstatshcrturesponses")
+record(ai, "icarus_wrs_1/pstatshcrturesponses")
 {
   field(DESC, "WRS Pstats HCRTUResponses") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsPstatsHCRTUResponses.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsPstatsHCRTUResponses.0 : 100 i")
 }
 
-record(longin, "icarus_wrs_1/pstatshcrtudropped")
+record(ai, "icarus_wrs_1/pstatshcrtudropped")
 {
   field(DESC, "WRS Pstats HCRTUDropped") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsPstatsHCRTUDropped.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsPstatsHCRTUDropped.0 : 100 i")
 }
 
-record(longin, "icarus_wrs_1/pstatshcfastmatchpriority")
+record(ai, "icarus_wrs_1/pstatshcfastmatchpriority")
 {
   field(DESC, "WRS Pstats HCFast Match Priority") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsPstatsHCFastMatchPriority.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsPstatsHCFastMatchPriority.0 : 100 i")
 }
 
-record(longin, "icarus_wrs_1/pstatshcfastmatchfastforward")
+record(ai, "icarus_wrs_1/pstatshcfastmatchfastforward")
 {
   field(DESC, "WRS Pstats HCFast Match Fast Forward") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsPstatsHCFastMatchFastForward.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsPstatsHCFastMatchFastForward.0 : 100 i")
 }
 
-record(longin, "icarus_wrs_1/pstatshcfastmatchnonforward")
+record(ai, "icarus_wrs_1/pstatshcfastmatchnonforward")
 {
   field(DESC, "WRS Pstats HCFast Match Non Forward") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsPstatsHCFastMatchNonForward.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsPstatsHCFastMatchNonForward.0 : 100 i")
 }
 
-record(longin, "icarus_wrs_1/pstatshcfastmatchrespvalid")
+record(ai, "icarus_wrs_1/pstatshcfastmatchrespvalid")
 {
   field(DESC, "WRS Pstats HCFast Match Resp Valid") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsPstatsHCFastMatchRespValid.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsPstatsHCFastMatchRespValid.0 : 100 i")
 }
 
-record(longin, "icarus_wrs_1/pstatshcfullmatchrespvalid")
+record(ai, "icarus_wrs_1/pstatshcfullmatchrespvalid")
 {
   field(DESC, "WRS Pstats HCFull Match Resp Valid") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsPstatsHCFullMatchRespValid.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsPstatsHCFullMatchRespValid.0 : 100 i")
 }
 
-record(longin, "icarus_wrs_1/pstatshcforwarded")
+record(ai, "icarus_wrs_1/pstatshcforwarded")
 {
   field(DESC, "WRS Pstats HCForwarded") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsPstatsHCForwarded.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsPstatsHCForwarded.0 : 100 i")
 }
 
-record(longin, "icarus_wrs_1/pstatshctrurespvalid")
+record(ai, "icarus_wrs_1/pstatshctrurespvalid")
 {
   field(DESC, "WRS Pstats HCTRUResp Valid") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsPstatsHCTRURespValid.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsPstatsHCTRURespValid.0 : 100 i")
 }
 
-record(longin, "icarus_wrs_1/pstatshcnictxframes")
+record(ai, "icarus_wrs_1/pstatshcnictxframes")
 {
   field(DESC, "WRS Pstats HCNICTXFrames") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsPstatsHCNICTXFrames.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsPstatsHCNICTXFrames.0 : 100 i")
 }
 
-record(longin, "icarus_wrs_1/ptpinstanceportindex")
+record(stringin, "icarus_wrs_1/ptpinstancetable")
+{
+  field(DESC, "WRS Ptp Instance Table") 
+  field(SCAN, "10 second")
+  field(DTYP, "Snmp")
+  field(INP, "@icarus-wrs01 public %(P)wrsPtpInstanceTable.0  100 i")
+}
+
+record(stringin, "icarus_wrs_1/ptpinstanceentry")
+{
+  field(DESC, "WRS Ptp Instance Entry") 
+  field(SCAN, "10 second")
+  field(DTYP, "Snmp")
+  field(INP, "@icarus-wrs01 public %(P)wrsPtpInstanceEntry.0  100 i")
+}
+
+record(ai, "icarus_wrs_1/ptpinstanceportindex")
 {
   field(DESC, "WRS Ptp Instance Port Index") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsPtpInstancePortIndex.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsPtpInstancePortIndex.0 : 100 i")
 }
 
-record(longin, "icarus_wrs_1/ptpinstanceonportindex")
+record(ai, "icarus_wrs_1/ptpinstanceonportindex")
 {
   field(DESC, "WRS Ptp Instance On Port Index") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsPtpInstanceOnPortIndex.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsPtpInstanceOnPortIndex.0 : 100 i")
 }
 
-record(longin, "icarus_wrs_1/ptpinstanceport")
+record(stringin, "icarus_wrs_1/ptpinstancename")
+{
+  field(DESC, "WRS Ptp Instance Name") 
+  field(SCAN, "10 second")
+  field(DTYP, "Snmp")
+  field(INP, "@icarus-wrs01 public %(P)wrsPtpInstanceName.0 : 100 i")
+}
+
+record(ai, "icarus_wrs_1/ptpinstanceport")
 {
   field(DESC, "WRS Ptp Instance Port") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsPtpInstancePort.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsPtpInstancePort.0 : 100 i")
 }
 
-record(longin, "icarus_wrs_1/ptpinstanceportinstance")
+record(ai, "icarus_wrs_1/ptpinstanceportinstance")
 {
   field(DESC, "WRS Ptp Instance Port Instance") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsPtpInstancePortInstance.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsPtpInstancePortInstance.0 : 100 i")
+}
+
+record(stringin, "icarus_wrs_1/ptpinstanceportname")
+{
+  field(DESC, "WRS Ptp Instance Port Name") 
+  field(SCAN, "10 second")
+  field(DTYP, "Snmp")
+  field(INP, "@icarus-wrs01 public %(P)wrsPtpInstancePortName.0 : 100 i")
 }
 
 record(longin, "icarus_wrs_1/ptpinstancestate")
@@ -1710,44 +2118,52 @@ record(longin, "icarus_wrs_1/ptpinstanceasymenabled")
   field(INP, "@icarus-wrs01 public %(P)wrsPtpInstanceAsymEnabled.0 ( 100 i")
 }
 
-record(longin, "icarus_wrs_1/ptpinstanceasymconstasymps")
+record(ai, "icarus_wrs_1/ptpinstanceasymconstasymps")
 {
   field(DESC, "WRS Ptp Instance Asym Const Asym PS") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsPtpInstanceAsymConstAsymPS.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsPtpInstanceAsymConstAsymPS.0 : 100 i")
 }
 
-record(longin, "icarus_wrs_1/ptpinstanceasymscdelaycoef")
+record(ai, "icarus_wrs_1/ptpinstanceasymscdelaycoef")
 {
   field(DESC, "WRS Ptp Instance Asym Sc Delay Coef") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsPtpInstanceAsymScDelayCoef.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsPtpInstanceAsymScDelayCoef.0 : 100 i")
 }
 
-record(longin, "icarus_wrs_1/ptpinstancetscorregresslatps")
+record(stringin, "icarus_wrs_1/ptpinstanceasymscdelaycoefhr")
+{
+  field(DESC, "WRS Ptp Instance Asym Sc Delay Coef HR") 
+  field(SCAN, "10 second")
+  field(DTYP, "Snmp")
+  field(INP, "@icarus-wrs01 public %(P)wrsPtpInstanceAsymScDelayCoefHR.0 : 100 i")
+}
+
+record(ai, "icarus_wrs_1/ptpinstancetscorregresslatps")
 {
   field(DESC, "WRS Ptp Instance TSCorr Egress Lat PS") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsPtpInstanceTSCorrEgressLatPS.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsPtpInstanceTSCorrEgressLatPS.0 : 100 i")
 }
 
-record(longin, "icarus_wrs_1/ptpinstancetscorringlatps")
+record(ai, "icarus_wrs_1/ptpinstancetscorringlatps")
 {
   field(DESC, "WRS Ptp Instance TSCorr Ing Lat PS") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsPtpInstanceTSCorrIngLatPS.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsPtpInstanceTSCorrIngLatPS.0 : 100 i")
 }
 
-record(longin, "icarus_wrs_1/ptpinstancetscorrsemistlatps")
+record(ai, "icarus_wrs_1/ptpinstancetscorrsemistlatps")
 {
   field(DESC, "WRS Ptp Instance TSCorr Semist Lat PS") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsPtpInstanceTSCorrSemistLatPS.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsPtpInstanceTSCorrSemistLatPS.0 : 100 i")
 }
 
 record(longin, "icarus_wrs_1/ptpinstanceprotodetectstate")
@@ -1766,20 +2182,36 @@ record(longin, "icarus_wrs_1/ptpinstanceextstate")
   field(INP, "@icarus-wrs01 public %(P)wrsPtpInstanceExtState.0 ( 100 i")
 }
 
-record(longin, "icarus_wrs_1/ptpinstancepeervid")
+record(ai, "icarus_wrs_1/ptpinstancepeermac")
+{
+  field(DESC, "WRS Ptp Instance Peer Mac") 
+  field(SCAN, "10 second")
+  field(DTYP, "Snmp")
+  field(INP, "@icarus-wrs01 public %(P)wrsPtpInstancePeerMac.0 : 100 i")
+}
+
+record(ai, "icarus_wrs_1/ptpinstancepeervid")
 {
   field(DESC, "WRS Ptp Instance Peer Vid") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsPtpInstancePeerVid.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsPtpInstancePeerVid.0 : 100 i")
 }
 
-record(longin, "icarus_wrs_1/ptpinstancevlannum")
+record(ai, "icarus_wrs_1/ptpinstancevlannum")
 {
   field(DESC, "WRS Ptp Instance Vlan Num") 
   field(SCAN, "10 second")
   field(DTYP, "Snmp")
-  field(INP, "@icarus-wrs01 public %(P)wrsPtpInstanceVlanNum.0 ( 100 i")
+  field(INP, "@icarus-wrs01 public %(P)wrsPtpInstanceVlanNum.0 : 100 i")
+}
+
+record(stringin, "icarus_wrs_1/ptpinstancevlanliststr")
+{
+  field(DESC, "WRS Ptp Instance Vlan List Str") 
+  field(SCAN, "10 second")
+  field(DTYP, "Snmp")
+  field(INP, "@icarus-wrs01 public %(P)wrsPtpInstanceVlanListStr.0 : 100 i")
 }
 
 record(longin, "icarus_wrs_1/ptpinstancestatuserror")
